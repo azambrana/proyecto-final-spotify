@@ -158,3 +158,52 @@ Método alternativo que puede requerir otros pasos, no se ha probado aún.
     git checkout nombre-de-mi-rama
     git merge main
     ```
+
+# Agregar dependencias con pip
+
+Si necesitas agregar una nueva dependencia, primero instálala en tu entorno conda y luego actualiza el archivo `requirements.txt`:
+
+```bash
+pip install nueva-dependencia
+pip freeze > requirements.txt
+```
+
+# Agregar dependencias con conda
+
+Si necesitas agregar una nueva dependencia, primero instálala en tu entorno conda y luego actualiza el archivo `environment.yml`:
+
+```bash
+conda install nueva-dependencia
+conda env export > environment.yml
+```
+
+# Actualizar dependencias
+
+Si necesitas actualizar las dependencias a las últimas versiones, primero actualiza las dependencias en tu entorno conda y luego actualiza el archivo `requirements.txt`:
+
+```bash
+pip install -r requirements.txt --upgrade
+pip freeze > requirements.txt
+```
+
+# Actualizar dependencias con conda
+
+Si necesitas actualizar las dependencias a las últimas versiones, primero actualiza las dependencias en tu entorno conda y luego actualiza el archivo `environment.yml`:
+
+```bash
+conda update --all
+conda env export > environment.yml
+```
+
+# Subir cambios de dependencias al repositorio
+
+Si has actualizado las dependencias, no olvides subir los cambios al repositorio:
+
+```bash
+git add .
+git commit -m "Actualizar dependencias"
+git push origin nombre-de-mi-rama
+```
+
+
+
