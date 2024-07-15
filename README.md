@@ -104,6 +104,17 @@ Método alternativo que puede requerir otros pasos, no se ha probado aún.
 
    http://localhost:8888/
 
+## Datasets
+
+### Archivos CSV
+
+Configurar el flag en AED2.ipynb para cargar los archivos CSV.
+
+load_from_csv = True
+
+Descomprimir [charts_bolivia_view.rar](data%2Fcharts_bolivia_view.rar)
+[spotify_dataset_charts_bolivia_view.rar](data%2Fspotify_dataset_charts_bolivia_view.rar)
+
 ## Configuración del Proyecto en PyCharm
 
 1. Clonar el Repositorio
