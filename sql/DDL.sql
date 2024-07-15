@@ -112,7 +112,7 @@ CREATE TABLE `charts` (
   `trend` varchar(13) DEFAULT NULL,
   `streams` bigint DEFAULT NULL,
   `track_id` varchar(25) DEFAULT NULL,
-  `chart_date` datetime DEFAULT NULL,
+  `chart_date` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_charts_track` (`track_id`),
   CONSTRAINT `FK_charts_track` FOREIGN KEY (`track_id`) REFERENCES `track` (`id`)
