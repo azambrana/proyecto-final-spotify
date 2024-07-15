@@ -430,7 +430,7 @@
     <created_date>2024/07/14 21:18:16.164</created_date>
     <modified_user>-</modified_user>
     <modified_date>2024/07/14 21:18:16.164</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -506,7 +506,7 @@
     </hop>
     <hop>
       <from>Select values</from>
-      <to>Table output</to>
+      <to>MySQL Charts Bolivia</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -537,7 +537,7 @@
     <encoding/>
     <fields>
       <field>
-        <name>title</name>
+        <name>id</name>
         <type>Integer</type>
         <format>#</format>
         <currency>$</currency>
@@ -548,18 +548,18 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>rank</name>
+        <name>title</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>122</length>
+        <length>191</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>date</name>
+        <name>rank</name>
         <type>Integer</type>
         <format>#</format>
         <currency>$</currency>
@@ -570,13 +570,24 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>artist</name>
-        <type>Date</type>
+        <name>date</name>
+        <type>String</type>
         <format>yyyy-MM-dd</format>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>artist</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>421</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -587,7 +598,7 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>105</length>
+        <length>53</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -598,7 +609,7 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>53</length>
+        <length>7</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -620,23 +631,12 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>7</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>streams</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
         <length>13</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>track_id</name>
+        <name>streams</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -647,7 +647,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>album</name>
+        <name>track_id</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -658,7 +658,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>popularity</name>
+        <name>album</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -669,7 +669,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>duration_ms</name>
+        <name>popularity</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -680,7 +680,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>explicit</name>
+        <name>duration_ms</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -691,7 +691,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>release_date</name>
+        <name>explicit</name>
         <type>Boolean</type>
         <format/>
         <currency>$</currency>
@@ -702,9 +702,9 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>available_markets</name>
+        <name>release_date</name>
         <type>String</type>
-        <format/>
+        <format>yyyy-MM-dd</format>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
@@ -713,7 +713,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_danceability</name>
+        <name>available_markets</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -724,18 +724,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_energy</name>
-        <type>Number</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>5</length>
-        <precision>3</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>af_key</name>
+        <name>af_danceability</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -746,7 +735,18 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_loudness</name>
+        <name>af_energy</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>6</length>
+        <precision>4</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>af_key</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -757,7 +757,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_mode</name>
+        <name>af_loudness</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -768,7 +768,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_speechiness</name>
+        <name>af_mode</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -779,7 +779,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_acousticness</name>
+        <name>af_speechiness</name>
         <type>Number</type>
         <format>#.#</format>
         <currency>$</currency>
@@ -790,18 +790,7 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>af_instrumentalness</name>
-        <type>Number</type>
-        <format>#.#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>8</length>
-        <precision>6</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>af_liveness</name>
+        <name>af_acousticness</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
@@ -809,6 +798,28 @@
         <group>,</group>
         <length>8</length>
         <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>af_instrumentalness</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>8</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>af_liveness</name>
+        <type>Number</type>
+        <format>#.#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>6</length>
+        <precision>4</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -829,8 +840,8 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>6</length>
-        <precision>4</precision>
+        <length>7</length>
+        <precision>3</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -840,8 +851,8 @@
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>7</length>
-        <precision>3</precision>
+        <length>3</length>
+        <precision>1</precision>
         <trim_type>none</trim_type>
       </field>
     </fields>
@@ -872,16 +883,20 @@
     </partitioning>
     <fields>
       <field>
+        <name>id</name>
+        <rename/>
+      </field>
+      <field>
         <name>title</name>
         <rename/>
       </field>
       <field>
         <name>rank</name>
-        <rename/>
+        <rename>chart_rank</rename>
       </field>
       <field>
         <name>date</name>
-        <rename/>
+        <rename>chart_date</rename>
       </field>
       <field>
         <name>artist</name>
@@ -983,10 +998,6 @@
         <name>af_time_signature</name>
         <rename/>
       </field>
-      <field>
-        <name>id</name>
-        <rename/>
-      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -1004,7 +1015,7 @@
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>MySQL Charts Bolivia</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1016,7 +1027,7 @@
     </partitioning>
     <connection>mysql_spotify</connection>
     <schema>spotify</schema>
-    <table>charts_full</table>
+    <table>charts_bolivia</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -1033,16 +1044,20 @@
     <return_field/>
     <fields>
       <field>
+        <column_name>id</column_name>
+        <stream_name>id</stream_name>
+      </field>
+      <field>
         <column_name>title</column_name>
         <stream_name>title</stream_name>
       </field>
       <field>
-        <column_name>rank</column_name>
-        <stream_name>rank</stream_name>
+        <column_name>chart_rank</column_name>
+        <stream_name>chart_rank</stream_name>
       </field>
       <field>
-        <column_name>date</column_name>
-        <stream_name>date</stream_name>
+        <column_name>chart_date</column_name>
+        <stream_name>chart_date</stream_name>
       </field>
       <field>
         <column_name>artist</column_name>
